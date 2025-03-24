@@ -1,6 +1,6 @@
-let arc = require('@architect/functions');
+import arc from '@architect/functions';
 
-async function getIndex (req) {
+export const handler = arc.http(async function getIndex (req) {
   return {
     statusCode: 200,
     headers: {
@@ -16,11 +16,9 @@ async function getIndex (req) {
   <title>Architect</title>
   <script src=${arc.static('index.js')}></script>
 </head>
-<body>this is the /:album/:photo route</body>
+<body>this is the /:album route</body>
 <pre><code>${JSON.stringify(req, null, 2)}</code></pre>
 </html>
 `
   }
-}
-
-exports.handler = arc.http.async(getIndex);
+})

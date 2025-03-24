@@ -1,6 +1,6 @@
-let arc = require('@architect/functions');
+import arc from '@architect/functions';
 
-async function getIndex (req) {
+export const handler = arc.http(async function getIndex (req) {
   return {
     statusCode: 200,
     headers: {
@@ -21,6 +21,4 @@ async function getIndex (req) {
 </html>
 `
   }
-}
-
-exports.handler = arc.http.async(getIndex);
+})
