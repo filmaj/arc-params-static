@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@architect/architect": "^9.5.4"
+    "@architect/architect": "^11"
   }
 }
